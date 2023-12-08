@@ -19,7 +19,7 @@ data class Usuario(val nome: String) {
 data class ConteudoEducacional(val nome: String, val duracaoEmMinutos: Int = 60, val nivel: Nivel)
 
 data class Formacao(val nome: String, val conteudos: List<ConteudoEducacional>, val nivel: Nivel) {
-    val duracaoEmMinutos: Int = conteudos.fold(0) {acc, cont -> acc + cont.duracaoEmMinutos}
+    val duracaoEmMinutos: Int = conteudos.fold(0) { acc, cont -> acc + cont.duracaoEmMinutos }
 }
 
 data class Curso(val formacao: Formacao) {
